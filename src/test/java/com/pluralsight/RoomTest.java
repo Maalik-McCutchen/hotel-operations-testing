@@ -35,6 +35,22 @@ class RoomTest {
         assertTrue(room.isDirty());
         assertFalse(room.isOccupied());
     }
+
+    @Test
+    public void cleanRoom_roomShouldNotBeOccupiedAndNotDirty() {
+
+        // arrange
+        Room room = new Room(2, 150.00);
+        room.checkIn();
+        room.checkOut();
+
+        // act
+        room.cleanRoom();
+
+        // assert
+        assertFalse(room.isOccupied());
+        assertFalse(room.isDirty());
+    }
 }
 
 

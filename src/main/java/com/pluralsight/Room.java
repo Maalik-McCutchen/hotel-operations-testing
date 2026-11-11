@@ -38,7 +38,6 @@ public class Room {
             isOccupied = true;
             isDirty = true;
         }
-
     }
 
     public void checkOut() {
